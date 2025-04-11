@@ -51,6 +51,7 @@ public class DashboardPage extends BaseFunctions {
     //---------------------Dashboard----------------------
     public boolean sichtbarkeitDerLogoutButton(){
         waitForOverlayToDisappear();
+        System.err.println("Logout-Button sichtbar: " + logoutButton.isDisplayed());
         return isVisible(logoutButton);
     }
 
