@@ -162,4 +162,15 @@ public class BaseFunctions {
         element.sendKeys(Keys.TAB);
     }
 
+    protected void waitForOverlayToDisappear() {
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                    By.cssSelector(".cdk-overlay-backdrop.cdk-overlay-backdrop-showing")
+            ));
+        } catch (TimeoutException e) {
+            System.out.println("Overlay war nicht sichtbar oder ist schon verschwunden.");
+        }
+    }
+
+
 }

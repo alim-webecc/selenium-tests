@@ -50,6 +50,7 @@ public class DashboardPage extends BaseFunctions {
 
     //---------------------Dashboard----------------------
     public boolean sichtbarkeitDerLogoutButton(){
+        waitForOverlayToDisappear();
         return isVisible(logoutButton);
     }
 

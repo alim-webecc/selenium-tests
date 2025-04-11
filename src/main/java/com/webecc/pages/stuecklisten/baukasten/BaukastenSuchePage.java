@@ -76,11 +76,13 @@ public class BaukastenSuchePage extends BaseFunctions {
     public void baukastenSuchen(String referenzNummer){
         dashboardPage.baukastenSucheOeffnen();
         kurzWarten();
+        waitForOverlayToDisappear();
         clickWithJSWhenVisible(suchKriterienLoeschenButton);
         kurzWarten();
         waitUntilVisible(referenzNummerEingabeFeld);
         sendKeysWhenVisibleAndClickable(referenzNummerEingabeFeld, referenzNummer);
         kurzWarten();
+        waitForOverlayToDisappear();
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        String value = (String) js.executeScript("return arguments[0].value;", referenzNummerEingabeFeld);
 //        System.out.println("Feldinhalt vor dem Setzen: " + value);
