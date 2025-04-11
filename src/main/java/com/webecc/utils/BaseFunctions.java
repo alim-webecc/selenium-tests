@@ -58,12 +58,14 @@ public class BaseFunctions {
 //        wait.until(ExpectedConditions.visibilityOf(element)).click();
 //    }
     protected void clickWhenClickable(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
     protected boolean isVisible(WebElement element) {
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
+            wait.until(ExpectedConditions.elementToBeClickable(element));
             return true;
         } catch (Exception e) {
             return false;
