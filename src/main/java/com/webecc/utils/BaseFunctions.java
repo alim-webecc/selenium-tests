@@ -2,10 +2,9 @@ package com.webecc.utils;
 
 import java.time.Duration;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,6 +19,24 @@ public class BaseFunctions {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.waitLonger = new WebDriverWait(driver,Duration.ofSeconds(60));
     }
+
+//    public BaseFunctions() {
+//        String headless = System.getProperty("headless", "true");
+//
+//        ChromeOptions options = new ChromeOptions();
+//        if (headless.equalsIgnoreCase("true")) {
+//            options.addArguments("--headless=new");
+//        }
+//
+//        this.driver = new ChromeDriver(options);
+//
+//        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        this.waitLonger = new WebDriverWait(driver, Duration.ofSeconds(60));
+//    }
+//
+//    public WebDriver getDriver() {
+//        return this.driver;
+//    }
 
     protected void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -73,7 +90,25 @@ public class BaseFunctions {
         String actualValue = (String) js.executeScript("return arguments[0].value;", input);
         System.out.println("Tatsächlicher JS-Wert danach: " + actualValue);
     }
+    protected void clickWithJSWhenVisible(WebElement button) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(button));
 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", button);
+    }
+    protected void kurzWarten(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-
+    protected void clearWhenVisible(By locator) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).clear();
+    }
+    protected void sendKeysWhenVisible(By locator, String text) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(text);
+    }
 }

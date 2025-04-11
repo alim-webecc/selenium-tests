@@ -6,7 +6,9 @@ import com.webecc.pages.stuecklisten.baukasten.BaukastenSuchePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,10 +19,29 @@ public class BaukastenRegressionsTest {
     BaukastenSuchePage baukastenSuchePage;
 
 
+//    @BeforeTest
+//    public void setup(){
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//
+//        // Jetzt ist der Driver bereit → PageObjects initialisieren
+//        loginPage = new LoginPage(driver);
+//        dashboardPage = new DashboardPage(driver);
+//        baukastenSuchePage = new BaukastenSuchePage(driver);
+//    }
     @BeforeTest
     public void setup(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        // Optional: headless steuerbar über System-Property
+        String headless = System.getProperty("headless", "false");
+        if (headless.equalsIgnoreCase("true")) {
+            options.addArguments("--headless=new");
+        }
+
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 
         // Jetzt ist der Driver bereit → PageObjects initialisieren
@@ -46,5 +67,10 @@ public class BaukastenRegressionsTest {
     public void bugTicketWEBECC3699(){
         String komputer = "81#2010*";
         Assert.assertTrue(baukastenSuchePage.bugTicketWEBECC3699(komputer));
+    }
+
+    @AfterTest
+    public void tearDown(){
+        driver.quit();
     }
 }

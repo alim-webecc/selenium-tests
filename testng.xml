@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="webecc Test Suite">
+    <test name="All Tests">
+        <classes>
+            <class name="com.webecc.KatalogSeitenRegressionsTest"/>
+            <class name="com.webecc.LexikonRegressionTest"/>
+            <class name="com.webecc.BaukastenRegressionsTest"/>
+        </classes>
+    </test>
+</suite>

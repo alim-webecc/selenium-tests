@@ -38,6 +38,16 @@ public class DashboardPage extends BaseFunctions {
     @FindBy(css = "#menuDropdownItemTextkeyStatistics")
     private WebElement textschluesselVerwendungenMenuItem;
 
+
+    //--------------------Katalog---------------------
+
+    @FindBy(xpath = "//button[@id=\"menuDropdownTriggerCatalog\"]")
+    private WebElement katalogMenuButton;
+
+    @FindBy(css = "#menuDropdownCatalogPageDetails")
+    private WebElement katalogSeitenDetailansichtMenuItem;
+
+
     //---------------------Dashboard----------------------
     public boolean sichtbarkeitDerLogoutButton(){
         return isVisible(logoutButton);
@@ -117,5 +127,13 @@ public class DashboardPage extends BaseFunctions {
     public void snrBaukastenVerwendungenOeffnen(){
         clickWhenVisible(stueckListenMenuButton);
         clickWhenVisible(snrBaukastenVerwendungenMenuItem);
+    }
+
+    //--------------------Katalog---------------------
+
+    //******************Katalogseiten-Detailansicht*******************
+    public void katalogSeitenDetailansichtOeffnen(){
+        clickWhenVisible(katalogMenuButton);
+        clickWhenVisible(katalogSeitenDetailansichtMenuItem);
     }
 }

@@ -1,5 +1,6 @@
 package com.webecc.pages.stuecklisten.baukasten;
 
+import com.github.javafaker.Faker;
 import com.webecc.pages.DashboardPage;
 import com.webecc.utils.BaseFunctions;
 import org.openqa.selenium.By;
@@ -23,7 +24,7 @@ public class BaukastenSuchePage extends BaseFunctions {
         super(driver);
         PageFactory.initElements(driver, this);
     }
-
+    Faker faker = new Faker();
     DashboardPage dashboardPage = new DashboardPage(driver);
     protected JavascriptExecutor js = (JavascriptExecutor) driver;
     Actions actions = new Actions(driver);
@@ -55,6 +56,12 @@ public class BaukastenSuchePage extends BaseFunctions {
     @FindBy(css = "#changeIndicator")
     private WebElement aenderungsKennzeichenDropDown;
 
+    @FindBy(xpath = "//div[@class=\"buttons z--1\"]/button[@class=\"secondary stahl z--1\"]")
+    private WebElement suchKriterienLoeschenButton;
+
+    @FindBy(xpath = "//input[@id=\"productiveTypesOnly\"]/following-sibling::label[@class=\"checkbox-input clr-control-label\"]")
+    private WebElement nurInPflegeTypenCheckBox;
+
     //------------------Such Ergebnisse---------------------
     @FindAll(@FindBy(xpath = "//mat-row[starts-with(@class,\"mat-mdc-row mdc-data-table__row cdk-row row_line_idx_\")]//input[@id=\"moduleId\"]"))
     private List<WebElement> referenzNummern;
@@ -68,15 +75,26 @@ public class BaukastenSuchePage extends BaseFunctions {
     //---------------------Suchbereich----------------------
     public void baukastenSuchen(String referenzNummer){
         dashboardPage.baukastenSucheOeffnen();
+        kurzWarten();
+        clickWithJSWhenVisible(suchKriterienLoeschenButton);
+        kurzWarten();
         waitUntilVisible(referenzNummerEingabeFeld);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        String value = (String) js.executeScript("return arguments[0].value;", referenzNummerEingabeFeld);
-        System.out.println("Feldinhalt vor dem Setzen: " + value);
-        overwriteInputValue(referenzNummerEingabeFeld, referenzNummer);
-        String value1 = (String) js.executeScript("return arguments[0].value;", referenzNummerEingabeFeld);
-        System.out.println("Feldinhalt nach dem Setzen: " + value1);
+        sendKeysWhenVisible(referenzNummerEingabeFeld, referenzNummer);
+        kurzWarten();
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        String value = (String) js.executeScript("return arguments[0].value;", referenzNummerEingabeFeld);
+//        System.out.println("Feldinhalt vor dem Setzen: " + value);
+//        overwriteInputValue(referenzNummerEingabeFeld, referenzNummer);
+//        String value1 = (String) js.executeScript("return arguments[0].value;", referenzNummerEingabeFeld);
+//        System.out.println("Feldinhalt nach dem Setzen: " + value1);
         Select select = new Select(aenderungsKennzeichenDropDown);
         select.selectByVisibleText("Alle");
+        if(faker.random().nextBoolean()){
+            System.out.println("true");
+            clickWhenVisible(nurInPflegeTypenCheckBox);
+        }else {
+            System.out.println("false");
+        }
         clickWhenVisible(suchIcon);
     }
     public boolean bugTicketWEBECC3699(String referenzNummer){

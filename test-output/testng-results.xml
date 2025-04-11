@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-11T00:03:46 MESZ" name="webecc Test Suite" finished-at="2025-04-11T00:05:12 MESZ" duration-ms="86000">
+    <groups>
+    </groups>
+    <test started-at="2025-04-11T00:03:46 MESZ" name="All Tests" finished-at="2025-04-11T00:05:12 MESZ" duration-ms="86000">
+      <class name="com.webecc.BaukastenRegressionsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.webecc.BaukastenRegressionsTest@7420d44]" started-at="2025-04-11T00:03:46 MESZ" name="setup" finished-at="2025-04-11T00:03:47 MESZ" duration-ms="1049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:1, instance:com.webecc.BaukastenRegressionsTest@7420d44]" started-at="2025-04-11T00:04:45 MESZ" name="loginTest" finished-at="2025-04-11T00:04:50 MESZ" duration-ms="5167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="baukastenSuchen()[pri:2, instance:com.webecc.BaukastenRegressionsTest@7420d44]" started-at="2025-04-11T00:04:50 MESZ" name="baukastenSuchen" finished-at="2025-04-11T00:05:02 MESZ" duration-ms="11985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baukastenSuchen -->
+        <test-method signature="bugTicketWEBECC3699()[pri:3, instance:com.webecc.BaukastenRegressionsTest@7420d44]" started-at="2025-04-11T00:05:02 MESZ" name="bugTicketWEBECC3699" finished-at="2025-04-11T00:05:11 MESZ" duration-ms="9017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bugTicketWEBECC3699 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.webecc.BaukastenRegressionsTest@7420d44]" started-at="2025-04-11T00:05:11 MESZ" name="tearDown" finished-at="2025-04-11T00:05:12 MESZ" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.webecc.BaukastenRegressionsTest -->
+      <class name="com.webecc.LexikonRegressionTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:20 MESZ" name="setup" finished-at="2025-04-11T00:04:21 MESZ" duration-ms="1016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:1, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:21 MESZ" name="loginTest" finished-at="2025-04-11T00:04:28 MESZ" duration-ms="6826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="openTheTextschluesselDetailansicht()[pri:2, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:28 MESZ" name="openTheTextschluesselDetailansicht" finished-at="2025-04-11T00:04:29 MESZ" duration-ms="1063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openTheTextschluesselDetailansicht -->
+        <test-method signature="textschluesselSuchen()[pri:3, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:29 MESZ" name="textschluesselSuchen" finished-at="2025-04-11T00:04:29 MESZ" duration-ms="771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textschluesselSuchen -->
+        <test-method signature="checkTheHeaderText()[pri:4, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:29 MESZ" name="checkTheHeaderText" finished-at="2025-04-11T00:04:30 MESZ" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTheHeaderText -->
+        <test-method signature="dieTextLabelSollNichtExistieren()[pri:5, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:30 MESZ" name="dieTextLabelSollNichtExistieren" finished-at="2025-04-11T00:04:40 MESZ" duration-ms="10264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dieTextLabelSollNichtExistieren -->
+        <test-method signature="istDerAnlegenVonNeueTextSchluesselErfolgreich()[pri:6, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:40 MESZ" name="istDerAnlegenVonNeueTextSchluesselErfolgreich" finished-at="2025-04-11T00:04:45 MESZ" duration-ms="5295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- istDerAnlegenVonNeueTextSchluesselErfolgreich -->
+        <test-method signature="istNeuAngelegteTextSchluesselRichtigAngezeigt()[pri:7, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:04:45 MESZ" name="istNeuAngelegteTextSchluesselRichtigAngezeigt" finished-at="2025-04-11T00:04:45 MESZ" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- istNeuAngelegteTextSchluesselRichtigAngezeigt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.webecc.LexikonRegressionTest@6cfeec31]" started-at="2025-04-11T00:05:12 MESZ" name="tearDown" finished-at="2025-04-11T00:05:12 MESZ" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.webecc.LexikonRegressionTest -->
+      <class name="com.webecc.KatalogSeitenRegressionsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.webecc.KatalogSeitenRegressionsTest@7c335bc3]" started-at="2025-04-11T00:03:47 MESZ" name="setup" finished-at="2025-04-11T00:03:48 MESZ" duration-ms="915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:1, instance:com.webecc.KatalogSeitenRegressionsTest@7c335bc3]" started-at="2025-04-11T00:03:48 MESZ" name="loginTest" finished-at="2025-04-11T00:03:53 MESZ" duration-ms="4958" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="sachnummernValidierungBeiStueckWWWEBECC3984Szenario3()[pri:2, instance:com.webecc.KatalogSeitenRegressionsTest@7c335bc3]" started-at="2025-04-11T00:03:53 MESZ" name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario3" finished-at="2025-04-11T00:04:06 MESZ" duration-ms="12827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sachnummernValidierungBeiStueckWWWEBECC3984Szenario3 -->
+        <test-method signature="sachnummernValidierungBeiStueckWWWEBECC3984Szenario4()[pri:3, instance:com.webecc.KatalogSeitenRegressionsTest@7c335bc3]" started-at="2025-04-11T00:04:06 MESZ" name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario4" finished-at="2025-04-11T00:04:20 MESZ" duration-ms="13753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sachnummernValidierungBeiStueckWWWEBECC3984Szenario4 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.webecc.KatalogSeitenRegressionsTest@7c335bc3]" started-at="2025-04-11T00:05:12 MESZ" name="tearDown" finished-at="2025-04-11T00:05:12 MESZ" duration-ms="300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.webecc.KatalogSeitenRegressionsTest -->
+    </test> <!-- All Tests -->
+  </suite> <!-- webecc Test Suite -->
+</testng-results>

@@ -2,7 +2,9 @@ package com.webecc;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -21,7 +23,17 @@ public class LexikonRegressionTest {
     @BeforeClass
     public void setup() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        // Optional: headless steuerbar über System-Property
+        String headless = System.getProperty("headless", "false");
+        if (headless.equalsIgnoreCase("true")) {
+            options.addArguments("--headless=new");
+        }
+
+        driver = new ChromeDriver(options);
+
         driver.manage().window().maximize();
 
         // Jetzt ist der Driver bereit → PageObjects initialisieren
@@ -33,7 +45,7 @@ public class LexikonRegressionTest {
     @Test(priority = 1)
     public void loginTest() {
         driver.get("https://dev.webecc.com/webecc/#/login");
-        loginPage.login("ALIM01", "#Vancouver.Munich0710");
+        loginPage.login("ALIMHA", "#Vancouver.Munich0710");
         Assert.assertTrue(dashboardPage.sichtbarkeitDerLogoutButton());
     }
 
@@ -73,5 +85,9 @@ public class LexikonRegressionTest {
     public void istNeuAngelegteTextSchluesselRichtigAngezeigt() {
         Assert.assertTrue(textschluesselDetailansichtPage.istNeuAngelegteTextSchluesselRichtigAngezeigt(),
                 "Es gibt mindestens eine Fehler bei Anzeige von neu angelegten Textschlüssel.");
+    }
+    @AfterTest
+    public void tearDown(){
+        driver.quit();
     }
 }
