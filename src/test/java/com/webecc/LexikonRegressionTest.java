@@ -70,7 +70,7 @@ public class LexikonRegressionTest {
     }
 
     @Test(priority = 5)
-    public void dieTextLabelSollNichtExistieren() {
+    public void dieTextLabelSollNichtExistierenWEBECC4032() {
         Assert.assertTrue(textschluesselDetailansichtPage.dieTextLabelSollNichtExistieren(),
                 "Höchst Warscheinlich der Bug WEBECC-4032 existiert immer noch.");
     }

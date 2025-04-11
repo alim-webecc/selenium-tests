@@ -79,7 +79,7 @@ public class BaukastenSuchePage extends BaseFunctions {
         clickWithJSWhenVisible(suchKriterienLoeschenButton);
         kurzWarten();
         waitUntilVisible(referenzNummerEingabeFeld);
-        sendKeysWhenVisible(referenzNummerEingabeFeld, referenzNummer);
+        sendKeysWhenVisibleAndClickable(referenzNummerEingabeFeld, referenzNummer);
         kurzWarten();
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        String value = (String) js.executeScript("return arguments[0].value;", referenzNummerEingabeFeld);
@@ -91,31 +91,31 @@ public class BaukastenSuchePage extends BaseFunctions {
         select.selectByVisibleText("Alle");
         if(faker.random().nextBoolean()){
             System.out.println("true");
-            clickWhenVisible(nurInPflegeTypenCheckBox);
+            clickWhenClickable(nurInPflegeTypenCheckBox);
         }else {
             System.out.println("false");
         }
-        clickWhenVisible(suchIcon);
+        clickWhenClickable(suchIcon);
     }
     public boolean bugTicketWEBECC3699(String referenzNummer){
         List<String> kopierteReferenzNummerList = new ArrayList<>();
-        clickWhenVisible(spaltenEinUndAusblendenIcon);
-        clickWhenVisible(allesAuswaehlenButton);
+        clickWhenClickable(spaltenEinUndAusblendenIcon);
+        clickWhenClickable(allesAuswaehlenButton);
         for(WebElement checkBox : checkBoxList){
             WebElement checkBoxLabel = checkBox.findElement(By.xpath("../../following-sibling::div"));
             if(!checkBoxLabel.getText().equalsIgnoreCase("Referenznummer")){
-                clickWhenVisible(checkBox);
+                clickWhenClickable(checkBox);
             }
         }
-        clickWhenVisible(sichtbareSpaltenOkButton);
+        clickWhenClickable(sichtbareSpaltenOkButton);
         String ersteTreffAnzahl = trefferAnzahl.getText();
         System.out.println("Warte auf Änderung von: " + ersteTreffAnzahl);
         clearWhenVisible(referenzNummerEingabeFeld);
         if(!referenzNummerEingabeFeld.getText().equalsIgnoreCase("")){
             clearWhenVisible(referenzNummerEingabeFeld);
         }
-        sendKeysWhenVisible(referenzNummerEingabeFeld, referenzNummer); //Bug-Ticket WEBECC-3699
-        clickWhenVisible(suchIcon);
+        sendKeysWhenVisibleAndClickable(referenzNummerEingabeFeld, referenzNummer); //Bug-Ticket WEBECC-3699
+        clickWhenClickable(suchIcon);
         waitLonger.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(trefferAnzahl,ersteTreffAnzahl)));
         int treffeAnzahlInt = Integer.parseInt(trefferAnzahl.getText().trim().split(" ")[0]);
         System.out.println(treffeAnzahlInt);
@@ -135,7 +135,7 @@ public class BaukastenSuchePage extends BaseFunctions {
                 kopierteReferenzNummerList.add(kopierteReferenzNummer);
             }
             if(malBlaettern < blaettern){
-                clickWhenVisible(naechsteSeiteButton);
+                clickWhenClickable(naechsteSeiteButton);
             }
         }
         String referenzNummerMitPunkt = "81.#2010";

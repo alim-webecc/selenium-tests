@@ -55,11 +55,12 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
 
     public boolean sachnummernValidierungBeiStueckWWWEBECC3984Szenario3(){  //Szenario 3: Zwei WW – eine oben, eine unten – mit anderer Stückzahl dazwischen
         dashboardPage.katalogSeitenDetailansichtOeffnen();
-        String katalogSeitenId = "#0000 0100 0068";
-        sendKeysWhenVisible(katalogSeitenIdEingabeFeld, katalogSeitenId);
         kurzWarten();
-        clickWhenVisible(suchButton);
-        clickWhenVisible(entwurfSeiteButton);
+        String katalogSeitenId = "#0000 0100 0068";
+        sendKeysWhenVisibleAndClickable(katalogSeitenIdEingabeFeld, katalogSeitenId);
+        kurzWarten();
+        clickWhenClickable(suchButton);
+        clickWhenClickable(entwurfSeiteButton);
         kurzWarten();
         List<String> sachnummerList = new ArrayList<>();
         for (WebElement sachnummerFeld : sachnummerFelderListe){
@@ -75,36 +76,36 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
                 for(int j = 0; j < 3; j++){
                     clearWhenVisible(By.xpath(
                             String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id='illustrationPosition']", i+j)));
-                    sendKeysWhenVisible(By.xpath(
+                    sendKeysWhenVisibleAndClickable(By.xpath(
                             String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id='illustrationPosition']", i+j)), positionsNummer);
                     clearWhenVisible(By.xpath(
                             String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id=\"quantity_1\"]", i+j)));
                     if(j%2 == 0){
-                        sendKeysWhenVisible(By.xpath(
+                        sendKeysWhenVisibleAndClickable(By.xpath(
                                 String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id=\"quantity_1\"]", i+j)), "WW");
                     }else {
-                        sendKeysWhenVisible(By.xpath(
+                        sendKeysWhenVisibleAndClickable(By.xpath(
                                 String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id=\"quantity_1\"]", i+j)), stueckZahl);
                     }
                 }
                 break;
             }
         }
-        clickWhenVisible(speichernButton);
+        clickWhenClickable(speichernButton);
         kurzWarten();
-        clickWhenVisible(freigebenButton);
+        clickWhenClickable(freigebenButton);
         kurzWarten();
         return isVisible(validationPopup);
     }
     public void clickOnOkButton(){
-        clickWhenVisible(okButton);
+        clickWhenClickable(okButton);
     }
     public boolean sachnummernValidierungBeiStueckWWWEBECC3984Szenario4(){ //Szenario 4: Nur eine Position mit WW
         String katalogSeitenId = "#0000 0100 0070";
-        sendKeysWhenVisible(katalogSeitenIdEingabeFeld, katalogSeitenId);
+        sendKeysWhenVisibleAndClickable(katalogSeitenIdEingabeFeld, katalogSeitenId);
         kurzWarten();
-        clickWhenVisible(suchButton);
-        clickWhenVisible(entwurfSeiteButton);
+        clickWhenClickable(suchButton);
+        clickWhenClickable(entwurfSeiteButton);
         kurzWarten();
         List<String> sachnummerList = new ArrayList<>();
         for (WebElement sachnummerFeld : sachnummerFelderListe){
@@ -119,24 +120,24 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
                 for(int j = 0; j < 2; j++){
                     clearWhenVisible(By.xpath(
                             String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id='illustrationPosition']", i+j)));
-                    sendKeysWhenVisible(By.xpath(
+                    sendKeysWhenVisibleAndClickable(By.xpath(
                             String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id='illustrationPosition']", i+j)), positionsNummer);
                     clearWhenVisible(By.xpath(
                             String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id=\"quantity_1\"]", i+j)));
                     if(j%2 == 0){
-                        sendKeysWhenVisible(By.xpath(
+                        sendKeysWhenVisibleAndClickable(By.xpath(
                                 String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id=\"quantity_1\"]", i+j)), "WW");
                     }else {
-                        sendKeysWhenVisible(By.xpath(
+                        sendKeysWhenVisibleAndClickable(By.xpath(
                                 String.format("//app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_%d')]//input[@id=\"quantity_1\"]", i+j)), stueckZahl);
                     }
                 }
                 break;
             }
         }
-        clickWhenVisible(speichernButton);
+        clickWhenClickable(speichernButton);
         kurzWarten();
-        clickWhenVisible(freigebenButton);
+        clickWhenClickable(freigebenButton);
         kurzWarten();
         return isVisible(validationPopup);
     }

@@ -76,33 +76,33 @@ public class DashboardPage extends BaseFunctions {
 
     //--------------------Lexikon---------------------
     public void openTheTextschluesselDetailansicht() {
-        clickWhenVisible(lexikonMenuButton);
-        clickWhenVisible(textschluesselDetailansichtMenuItem);
+        clickWhenClickable(lexikonMenuButton);
+        clickWhenClickable(textschluesselDetailansichtMenuItem);
     }
 
     public void openTheLexikonSuche() {
-        clickWhenVisible(lexikonMenuButton);
-        clickWhenVisible(lexikonSucheMenuItem);
+        clickWhenClickable(lexikonMenuButton);
+        clickWhenClickable(lexikonSucheMenuItem);
     }
 
     public void openTheStatistikDerUebersetzungen() {
-        clickWhenVisible(lexikonMenuButton);
-        clickWhenVisible(statistikDerUebersetzungMenuItem);
+        clickWhenClickable(lexikonMenuButton);
+        clickWhenClickable(statistikDerUebersetzungMenuItem);
     }
 
     public void openTheUebersetzungsExport() {
-        clickWhenVisible(lexikonMenuButton);
-        clickWhenVisible(uebersetzungsExportMenuItem);
+        clickWhenClickable(lexikonMenuButton);
+        clickWhenClickable(uebersetzungsExportMenuItem);
     }
 
     public void openTheUebersetzungsImport() {
-        clickWhenVisible(lexikonMenuButton);
-        clickWhenVisible(uebersetzungsImportMenuItem);
+        clickWhenClickable(lexikonMenuButton);
+        clickWhenClickable(uebersetzungsImportMenuItem);
     }
 
     public void openTheTextschluesselVerwendungen() {
-        clickWhenVisible(lexikonMenuButton);
-        clickWhenVisible(textschluesselVerwendungenMenuItem);
+        clickWhenClickable(lexikonMenuButton);
+        clickWhenClickable(textschluesselVerwendungenMenuItem);
     }
 
     //--------------------Stücklisten---------------------
@@ -115,25 +115,25 @@ public class DashboardPage extends BaseFunctions {
 
     //********************Baukasten***********************
     public void baukastenDetailansichtOeffnen(){
-        clickWhenVisible(stueckListenMenuButton);
-        clickWhenVisible(baukastenDetailansichtMenuItem);
+        clickWhenClickable(stueckListenMenuButton);
+        clickWhenClickable(baukastenDetailansichtMenuItem);
     }
 
     public void baukastenSucheOeffnen(){
-        clickWhenVisible(stueckListenMenuButton);
-        clickWhenVisible(baukastenSucheMenuItem);
+        clickWhenClickable(stueckListenMenuButton);
+        clickWhenClickable(baukastenSucheMenuItem);
     }
 
     public void snrBaukastenVerwendungenOeffnen(){
-        clickWhenVisible(stueckListenMenuButton);
-        clickWhenVisible(snrBaukastenVerwendungenMenuItem);
+        clickWhenClickable(stueckListenMenuButton);
+        clickWhenClickable(snrBaukastenVerwendungenMenuItem);
     }
 
     //--------------------Katalog---------------------
 
     //******************Katalogseiten-Detailansicht*******************
     public void katalogSeitenDetailansichtOeffnen(){
-        clickWhenVisible(katalogMenuButton);
-        clickWhenVisible(katalogSeitenDetailansichtMenuItem);
+        clickWhenClickable(katalogMenuButton);
+        clickWhenClickable(katalogSeitenDetailansichtMenuItem);
     }
 }

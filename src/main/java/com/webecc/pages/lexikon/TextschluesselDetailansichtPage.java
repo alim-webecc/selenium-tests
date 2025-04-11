@@ -88,8 +88,8 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
     public void textschluesselSuchen() {
         int textschluesselId = faker.random().nextInt(100);
         textschluesselObjectClass.setTextschluesselId(textschluesselId);
-        sendKeysWhenVisible(textschluesselInputField, String.valueOf(textschluesselId));
-        clickWhenVisible(searchIcon);
+        sendKeysWhenVisibleAndClickable(textschluesselInputField, String.valueOf(textschluesselId));
+        clickWhenClickable(searchIcon);
     }
 
     public boolean isTheTextschluesselPresent() {
@@ -105,7 +105,7 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
     }
 
     public boolean dieTextLabelSollNichtExistieren() {
-        clickWhenVisible(neuanlageButton);
+        clickWhenClickable(neuanlageButton);
         return !isVisible(falschenTextLabel);
     }
 
@@ -131,15 +131,15 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
         Select selectTextart = new Select(textArtDropDown);
         selectTextart.selectByVisibleText(" CAD (86) ");
         waitUntilVisible(sedokKlassifizierungsDropDown);
-        clickWhenVisible(sedokKlassifizierungsDropDown);
+        clickWhenClickable(sedokKlassifizierungsDropDown);
         Select selectSedokKlassifizierung = new Select(sedokKlassifizierungsDropDown);
         selectSedokKlassifizierung.selectByValue("0: G");
         waitUntilVisible(systemKenzeichenDropDown);
-        clickWhenVisible(systemKenzeichenDropDown);
+        clickWhenClickable(systemKenzeichenDropDown);
         Select selectSystemKenzeichen = new Select(systemKenzeichenDropDown);
         selectSystemKenzeichen.selectByValue("2: all");
-        sendKeysWhenVisible(textAreaCad86, mehrZeiligeTextGenerieren());
-        clickWhenVisible(speichernButton);
+        sendKeysWhenVisibleAndClickable(textAreaCad86, mehrZeiligeTextGenerieren());
+        clickWhenClickable(speichernButton);
         if (isVisible(successAlertContent)) {
             String successAlertText = successAlertContent.getText();
             String[] teile = successAlertText.split(" ");

@@ -3,8 +3,6 @@ package com.webecc.utils;
 import java.time.Duration;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -45,16 +43,22 @@ public class BaseFunctions {
         waitLonger.until(ExpectedConditions.visibilityOf(element));
     }
 
-    protected void sendKeysWhenVisible(WebElement element, String text) {
-        wait.until(ExpectedConditions.visibilityOf(element)).sendKeys(text);
+    protected void sendKeysWhenVisibleAndClickable(WebElement element, String text) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.clear();
+        element.sendKeys(text);
     }
 
     protected void clearWhenVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element)).clear();
     }
 
-    protected void clickWhenVisible(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element)).click();
+//    protected void clickWhenVisible(WebElement element) {
+//        wait.until(ExpectedConditions.visibilityOf(element)).click();
+//    }
+    protected void clickWhenClickable(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
     protected boolean isVisible(WebElement element) {
@@ -108,7 +112,10 @@ public class BaseFunctions {
     protected void clearWhenVisible(By locator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).clear();
     }
-    protected void sendKeysWhenVisible(By locator, String text) {
+    protected void sendKeysWhenVisibleAndClickable(By locator, String text) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(text);
+    }
+    protected void scrollZumElement(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }

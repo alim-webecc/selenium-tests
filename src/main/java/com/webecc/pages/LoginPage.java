@@ -30,11 +30,11 @@ public class LoginPage extends BaseFunctions {
     private WebElement okButton;
 
     public void login(String username, String password) {
-        sendKeysWhenVisible(usernameField, username);
-        sendKeysWhenVisible(passwordField, password);
-        clickWhenVisible(loginButton);
+        sendKeysWhenVisibleAndClickable(usernameField, username);
+        sendKeysWhenVisibleAndClickable(passwordField, password);
+        clickWhenClickable(loginButton);
         if (isVisible(secondLoginSessionPopup)) {
-            clickWhenVisible(okButton);
+            clickWhenClickable(okButton);
         }
     }
 }
