@@ -118,4 +118,28 @@ public class BaseFunctions {
     protected void scrollZumElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+    protected void robustInput(WebElement element, String value) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+
+        // Clearen + Fallback für Angular/React
+        element.clear();
+        element.sendKeys(value);
+
+        // Prüfen, ob Wert wirklich gesetzt ist
+        String actual = element.getAttribute("value");
+        if (!actual.equals(value)) {
+            // JavaScript-Workaround mit Change-Event
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].value = arguments[1]; arguments[0].dispatchEvent(new Event('input', { bubbles: true })); arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+                    element, value
+            );
+        }
+
+        // Trigger eventuell zusätzliches Tab
+        element.sendKeys(Keys.TAB);
+    }
+
 }

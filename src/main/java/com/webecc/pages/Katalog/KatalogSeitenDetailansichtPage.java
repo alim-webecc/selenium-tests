@@ -57,7 +57,8 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
         dashboardPage.katalogSeitenDetailansichtOeffnen();
         kurzWarten();
         String katalogSeitenId = "#0000 0100 0068";
-        sendKeysWhenVisibleAndClickable(katalogSeitenIdEingabeFeld, katalogSeitenId);
+//        sendKeysWhenVisibleAndClickable(katalogSeitenIdEingabeFeld, katalogSeitenId);
+        robustInput(katalogSeitenIdEingabeFeld,katalogSeitenId);
         kurzWarten();
         clickWhenClickable(suchButton);
         clickWhenClickable(entwurfSeiteButton);
