@@ -62,15 +62,33 @@ public class BaseFunctions {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
+//    protected boolean isVisible(WebElement element) {
+//        try {
+//            wait.until(ExpectedConditions.visibilityOf(element));
+//            wait.until(ExpectedConditions.elementToBeClickable(element));
+//            return true;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+
     protected boolean isVisible(WebElement element) {
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
-            wait.until(ExpectedConditions.elementToBeClickable(element));
+            wait.until(driver -> {
+                try {
+                    return element.isDisplayed() && element.isEnabled() && element.getCssValue("opacity").equals("1");
+                } catch (Exception e) {
+                    return false;
+                }
+            });
             return true;
         } catch (Exception e) {
+            System.out.println("Element nicht sichtbar oder nicht klickbar: " + e.getMessage());
             return false;
         }
     }
+
     public void overwriteInputValue(WebElement input, String value) {
         waitUntilVisible(input);
         JavascriptExecutor js = (JavascriptExecutor) driver;
