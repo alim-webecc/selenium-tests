@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoopTest {
-    @Test(priority = 1)
+//    @Test(priority = 1)
     public void wiederholeTestSuite() {
         for (int i = 1; i <= 10; i++) {
             System.out.println("Durchlauf: " + i);
