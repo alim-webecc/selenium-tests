@@ -70,18 +70,18 @@ public void setup(){
         loginPage.login("ALIM01", "#Vancouver.Munich0710");
         Assert.assertTrue(dashboardPage.sichtbarkeitDerLogoutButton());
     }
-    @Test(priority = 2)
-    public void testAbsichtlichFehlgeschlagen() {
-        Assert.assertTrue(false, "Dieser Test schlägt absichtlich fehl");
-    }
+//    @Test(priority = 2)
+//    public void testAbsichtlichFehlgeschlagen() {
+//        Assert.assertTrue(false, "Dieser Test schlägt absichtlich fehl");
+//    }
 
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void baukastenSuchen(){
         String nummer = "81#1*";
         baukastenSuchePage.baukastenSuchen(nummer);
         Assert.assertTrue(baukastenSuchePage.istDieBaukastenSucheErfolgreich());
     }
-    @Test(priority = 4)
+    @Test(priority = 3)
     public void bugTicketWEBECC3699(){
         String komputer = "81#2010*";
         Assert.assertTrue(baukastenSuchePage.bugTicketWEBECC3699(komputer));

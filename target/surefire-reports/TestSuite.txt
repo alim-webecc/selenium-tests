@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 18, Failures: 1, Errors: 0, Skipped: 17, Time elapsed: 4.457 s <<< FAILURE! - in TestSuite
-setup(com.webecc.regressionstests.LexikonRegressionTest)  Time elapsed: 4.211 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
-
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 96.672 s - in TestSuite

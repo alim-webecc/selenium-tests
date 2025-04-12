@@ -29,7 +29,6 @@ public class LexikonRegressionTest {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
-        Reporter.getCurrentTestResult().getTestContext().setAttribute("driver", driver);
         String headless = System.getProperty("headless", "false");
 
         if (headless.equalsIgnoreCase("true")) {
@@ -46,6 +45,7 @@ public class LexikonRegressionTest {
         if (!headless.equalsIgnoreCase("true")) {
             driver.manage().window().maximize();
         }
+        Reporter.getCurrentTestResult().getTestContext().setAttribute("driver", driver);
 
         // Page Objects
         loginPage = new LoginPage(driver);
