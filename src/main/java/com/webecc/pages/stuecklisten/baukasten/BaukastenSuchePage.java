@@ -92,10 +92,10 @@ public class BaukastenSuchePage extends BaseFunctions {
         Select select = new Select(aenderungsKennzeichenDropDown);
         select.selectByVisibleText("Alle");
         if(faker.random().nextBoolean()){
-            System.out.println("true");
+//            System.out.println("true");
             clickWhenClickable(nurInPflegeTypenCheckBox);
         }else {
-            System.out.println("false");
+//            System.out.println("false");
         }
         clickWhenClickable(suchIcon);
     }
@@ -111,7 +111,7 @@ public class BaukastenSuchePage extends BaseFunctions {
         }
         clickWhenClickable(sichtbareSpaltenOkButton);
         String ersteTreffAnzahl = trefferAnzahl.getText();
-        System.out.println("Warte auf Änderung von: " + ersteTreffAnzahl);
+//        System.out.println("Warte auf Änderung von: " + ersteTreffAnzahl);
         clearWhenVisible(referenzNummerEingabeFeld);
         if(!referenzNummerEingabeFeld.getText().equalsIgnoreCase("")){
             clearWhenVisible(referenzNummerEingabeFeld);
@@ -120,11 +120,11 @@ public class BaukastenSuchePage extends BaseFunctions {
         clickWhenClickable(suchIcon);
         waitLonger.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(trefferAnzahl,ersteTreffAnzahl)));
         int treffeAnzahlInt = Integer.parseInt(trefferAnzahl.getText().trim().split(" ")[0]);
-        System.out.println(treffeAnzahlInt);
+//        System.out.println(treffeAnzahlInt);
         int blaettern = treffeAnzahlInt/20;
-        System.out.println(blaettern);
+//        System.out.println(blaettern);
         for(int malBlaettern = 0; malBlaettern <= blaettern; malBlaettern++){
-            System.out.println("aktuelle Seite : " + (malBlaettern+1));
+//            System.out.println("aktuelle Seite : " + (malBlaettern+1));
             waitUntilVisible(ersteReferenzNummer);
             for(WebElement referenzNummerElement : referenzNummern){
                 actions.moveToElement(referenzNummerElement).perform();
@@ -133,7 +133,7 @@ public class BaukastenSuchePage extends BaseFunctions {
                         d -> !referenzNummerElement.getAttribute("title").isEmpty()
                 );
                 String kopierteReferenzNummer = referenzNummerElement.getAttribute("title");
-                System.out.println(kopierteReferenzNummer);
+//                System.out.println(kopierteReferenzNummer);
                 kopierteReferenzNummerList.add(kopierteReferenzNummer);
             }
             if(malBlaettern < blaettern){
@@ -141,7 +141,7 @@ public class BaukastenSuchePage extends BaseFunctions {
             }
         }
         String referenzNummerMitPunkt = "81.#2010";
-        System.out.println(kopierteReferenzNummerList.size());
+//        System.out.println(kopierteReferenzNummerList.size());
         for (String r : kopierteReferenzNummerList) {
             if (!r.contains(referenzNummerMitPunkt)) {
                 return false;

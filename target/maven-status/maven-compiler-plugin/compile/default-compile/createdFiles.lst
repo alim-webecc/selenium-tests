@@ -1,3 +1,9 @@
-com\webecc\utils\Setup.class
-com\webecc\Main.class
+com\webecc\objects\TextschluesselObjectClass.class
+com\webecc\pages\Katalog\KatalogSeitenDetailansichtPage.class
+com\webecc\pages\DashboardPage.class
 com\webecc\pages\LoginPage.class
+com\webecc\utils\BaseFunctions.class
+com\webecc\pages\stuecklisten\baukasten\BaukastenSuchePage.class
+com\webecc\pages\stuecklisten\baukasten\BaukastenDetailansichtPage.class
+com\webecc\pages\lexikon\TextschluesselDetailansichtPage.class
+com\webecc\pages\stuecklisten\baukasten\SNRBaukastenVerwendungenPage.class

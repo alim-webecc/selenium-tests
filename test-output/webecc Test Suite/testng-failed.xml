@@ -3,12 +3,12 @@
 <suite name="Failed suite [webecc Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="All Tests(failed)">
     <classes>
-      <class name="com.webecc.KatalogSeitenRegressionsTest">
+      <class name="com.webecc.regressionstests.KatalogSeitenRegressionsTest">
         <methods>
           <include name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario1"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.webecc.KatalogSeitenRegressionsTest -->
+      </class> <!-- com.webecc.regressionstests.KatalogSeitenRegressionsTest -->
     </classes>
   </test> <!-- All Tests(failed) -->
 </suite> <!-- Failed suite [webecc Test Suite] -->

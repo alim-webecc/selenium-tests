@@ -97,9 +97,9 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
     }
 
     public boolean istDasRichtigeTextschluessel() {
-        System.out.println("lokalisierte id:" + textschluesselHeaderTexte.get(0).getText());
-        System.out.println(
-                "In Objectclass gespeicherte id: " + String.valueOf(textschluesselObjectClass.getTextschluesselId()));
+//        System.out.println("lokalisierte id:" + textschluesselHeaderTexte.get(0).getText());
+//        System.out.println(
+//                "In Objectclass gespeicherte id: " + String.valueOf(textschluesselObjectClass.getTextschluesselId()));
         return textschluesselHeaderTexte.get(0).getText().trim()
                 .equalsIgnoreCase(String.valueOf(textschluesselObjectClass.getTextschluesselId()));
     }
@@ -156,19 +156,19 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
             if (textschluesselHeaderTexte.get(0).getText()
                     .equalsIgnoreCase(String.valueOf(textschluesselObjectClass.getTextschluesselId()))) {
                 n += 1;
-                System.out.println("TextschlüsselId wurde Richtig angezeigt.");
+//                System.out.println("TextschlüsselId wurde Richtig angezeigt.");
             }
         }
         if (isVisible(textschluesselHeaderTexte.get(1))) {
             if (textschluesselObjectClass.getTextDeutschErsteZeile()
                     .contains(textschluesselHeaderTexte.get(1).getText())) {
                 n += 1;
-                System.out.println("Textschlüsseltext wurde Richtig angezeigt.");
+//                System.out.println("Textschlüsseltext wurde Richtig angezeigt.");
             }
-            System.out.println("Text: " + textschluesselHeaderTexte.get(1).getText());
-            System.out.println("Text aus Objectclass: " + textschluesselObjectClass.getTextDeutschErsteZeile());
+//            System.out.println("Text: " + textschluesselHeaderTexte.get(1).getText());
+//            System.out.println("Text aus Objectclass: " + textschluesselObjectClass.getTextDeutschErsteZeile());
         }
-        System.out.println("n ist: " + n);
+//        System.out.println("n ist: " + n);
         return n == 2;
     }
 
@@ -180,7 +180,7 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
     public boolean istZweiteSpracheSichtbarkeitKorrekt() {
         try {
             WebElement checkbox = waitForTranslationCheckbox();
-            System.out.println("Checkbox wurde gefunden.");
+//            System.out.println("Checkbox wurde gefunden.");
 
             boolean isSelected = checkbox.isSelected();
             boolean dropdownVisible = isVisible(zweiteSpracheDropDown);
@@ -188,7 +188,7 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
             if (isSelected && dropdownVisible) return true;
             if (!isSelected && !dropdownVisible) return true;
         } catch (TimeoutException e) {
-            System.out.println("Checkbox wurde NICHT gefunden.");
+//            System.out.println("Checkbox wurde NICHT gefunden.");
         }
         return false;
     }

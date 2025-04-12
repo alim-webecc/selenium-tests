@@ -1,12 +1,13 @@
-package com.webecc;
+package com.webecc.regressionstests;
 
+import com.webecc.utils.ScreenshotListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.webecc.pages.DashboardPage;
@@ -15,6 +16,7 @@ import com.webecc.pages.lexikon.TextschluesselDetailansichtPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+@Listeners(ScreenshotListener.class)
 public class LexikonRegressionTest {
     WebDriver driver;
     LoginPage loginPage;

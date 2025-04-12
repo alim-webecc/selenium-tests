@@ -1,3 +1,6 @@
-com\webecc\base\BaseTest.class
-com\webecc\AppTest.class
-com\webecc\LoginTest.class
+com\webecc\regressionstests\KatalogSeitenRegressionsTest.class
+com\webecc\regressionstests\LexikonRegressionTest.class
+com\webecc\utils\ScreenshotListener.class
+com\webecc\LoopTest.class
+com\webecc\utils\ScreenshotUtil.class
+com\webecc\regressionstests\BaukastenRegressionsTest.class

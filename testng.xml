@@ -3,9 +3,9 @@
 <suite name="webecc Test Suite">
     <test name="All Tests">
         <classes>
-            <class name="com.webecc.KatalogSeitenRegressionsTest"/>
-            <class name="com.webecc.LexikonRegressionTest"/>
-            <class name="com.webecc.BaukastenRegressionsTest"/>
+            <class name="com.webecc.regressionstests.KatalogSeitenRegressionsTest"/>
+            <class name="com.webecc.regressionstests.LexikonRegressionTest"/>
+            <class name="com.webecc.regressionstests.BaukastenRegressionsTest"/>
         </classes>
     </test>
 </suite>
