@@ -6,12 +6,35 @@
       <class name="com.webecc.regressionstests.BaukastenRegressionsTest">
         <methods>
           <include name="baukastenSuchen"/>
+          <include name="testAbsichtlichFehlgeschlagen"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="bugTicketWEBECC3699"/>
           <include name="loginTest"/>
         </methods>
       </class> <!-- com.webecc.regressionstests.BaukastenRegressionsTest -->
+      <class name="com.webecc.regressionstests.KatalogSeitenRegressionsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario4"/>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario3"/>
+        </methods>
+      </class> <!-- com.webecc.regressionstests.KatalogSeitenRegressionsTest -->
+      <class name="com.webecc.regressionstests.LexikonRegressionTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="openTheTextschluesselDetailansicht"/>
+          <include name="setup"/>
+          <include name="checkTheHeaderText"/>
+          <include name="dieTextLabelSollNichtExistierenWEBECC4032"/>
+          <include name="istDerAnlegenVonNeueTextSchluesselErfolgreich"/>
+          <include name="istNeuAngelegteTextSchluesselRichtigAngezeigt"/>
+          <include name="textschluesselSuchen"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.webecc.regressionstests.LexikonRegressionTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

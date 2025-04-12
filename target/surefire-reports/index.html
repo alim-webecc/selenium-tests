@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-failed">Surefire suite</span>
+              <span class="suite-name border-skipped">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,90 +92,86 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">13 methods, 3 failed,   10 passed</span>
+                    <span class="method-stats">14 methods,  14 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods skipped suite-Surefire_suite"> (hide)</a> <!-- hide-methods skipped suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods skipped suite-Surefire_suite"> (show)</a> <!-- show-methods skipped suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Surefire_suite">
+                    <div class="method-list-content skipped suite-Surefire_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="baukastenSuchen">baukastenSuchen</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="bugTicketWEBECC3699">bugTicketWEBECC3699</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Surefire_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Surefire_suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="checkTheHeaderText">checkTheHeaderText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="dieTextLabelSollNichtExistierenWEBECC4032">dieTextLabelSollNichtExistierenWEBECC4032</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="istDerAnlegenVonNeueTextSchluesselErfolgreich">istDerAnlegenVonNeueTextSchluesselErfolgreich</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="istNeuAngelegteTextSchluesselRichtigAngezeigt">istNeuAngelegteTextSchluesselRichtigAngezeigt</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.KatalogSeitenRegressionsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.KatalogSeitenRegressionsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="openTheTextschluesselDetailansicht">openTheTextschluesselDetailansicht</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.KatalogSeitenRegressionsTest" class="method navigator-link" hash-for-method="sachnummernValidierungBeiStueckWWWEBECC3984Szenario3">sachnummernValidierungBeiStueckWWWEBECC3984Szenario3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.KatalogSeitenRegressionsTest" class="method navigator-link" hash-for-method="sachnummernValidierungBeiStueckWWWEBECC3984Szenario4">sachnummernValidierungBeiStueckWWWEBECC3984Szenario4</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="testAbsichtlichFehlgeschlagen">testAbsichtlichFehlgeschlagen</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="textschluesselSuchen">textschluesselSuchen</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                    </div> <!-- method-list-content skipped suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -187,9 +183,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-failed">
+          <div class="suite-Surefire_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.webecc.regressionstests.BaukastenRegressionsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -198,43 +194,11 @@
                   <a name="baukastenSuchen">
                   </a> <!-- baukastenSuchen -->
                   <span class="method-name">baukastenSuchen</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: #menuDropdownTriggerPartsList&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.webecc.utils.BaseFunctions.clickWhenClickable(BaseFunctions.java:61)
-	at com.webecc.pages.DashboardPage.baukastenSucheOeffnen(DashboardPage.java:125)
-	at com.webecc.pages.stuecklisten.baukasten.BaukastenSuchePage.baukastenSuchen(BaukastenSuchePage.java:77)
-	at com.webecc.regressionstests.BaukastenRegressionsTest.baukastenSuchen(BaukastenRegressionsTest.java:75)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#menuDropdownTriggerPartsList&quot;}
-  (Session info: chrome=135.0.7049.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [109b5b7a273728b884d800b673034a2c, findElement {value=#menuDropdownTriggerPartsList, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ALIM~1.HAM\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59399}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59399/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 109b5b7a273728b884d800b673034a2c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 35 more
-... Removed 33 stack frames
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -243,42 +207,11 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="bugTicketWEBECC3699">
                   </a> <!-- bugTicketWEBECC3699 -->
                   <span class="method-name">bugTicketWEBECC3699</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //cds-icon[starts-with(@id, &apos;showHideColumnsButton_&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.webecc.utils.BaseFunctions.clickWhenClickable(BaseFunctions.java:61)
-	at com.webecc.pages.stuecklisten.baukasten.BaukastenSuchePage.bugTicketWEBECC3699(BaukastenSuchePage.java:104)
-	at com.webecc.regressionstests.BaukastenRegressionsTest.bugTicketWEBECC3699(BaukastenRegressionsTest.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//cds-icon[starts-with(@id, &apos;showHideColumnsButton_&apos;)]&quot;}
-  (Session info: chrome=135.0.7049.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [109b5b7a273728b884d800b673034a2c, findElement {value=//cds-icon[starts-with(@id, &apos;showHideColumnsButton_&apos;)], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ALIM~1.HAM\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59399}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59399/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 109b5b7a273728b884d800b673034a2c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 34 more
-... Removed 33 stack frames
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -287,50 +220,32 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="loginTest">
                   </a> <!-- loginTest -->
                   <span class="method-name">loginTest</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: button.app-button-logout&apos; (tried for 60 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.webecc.utils.BaseFunctions.waitLongerUntilVisible(BaseFunctions.java:43)
-	at com.webecc.pages.DashboardPage.sichtbarkeitDerLogoutButton(DashboardPage.java:53)
-	at com.webecc.regressionstests.BaukastenRegressionsTest.loginTest(BaukastenRegressionsTest.java:69)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;button.app-button-logout&quot;}
-  (Session info: chrome=135.0.7049.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [109b5b7a273728b884d800b673034a2c, findElement {value=button.app-button-logout, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ALIM~1.HAM\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59399}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59399/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 109b5b7a273728b884d800b673034a2c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 34 more
-... Removed 33 stack frames
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAbsichtlichFehlgeschlagen">
+                  </a> <!-- testAbsichtlichFehlgeschlagen -->
+                  <span class="method-name">testAbsichtlichFehlgeschlagen</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-failed -->
-          <div class="suite-Surefire_suite-class-passed">
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.webecc.regressionstests.KatalogSeitenRegressionsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -339,6 +254,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="loginTest">
                   </a> <!-- loginTest -->
                   <span class="method-name">loginTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -346,6 +267,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario3">
                   </a> <!-- sachnummernValidierungBeiStueckWWWEBECC3984Szenario3 -->
                   <span class="method-name">sachnummernValidierungBeiStueckWWWEBECC3984Szenario3</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -353,13 +280,19 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario4">
                   </a> <!-- sachnummernValidierungBeiStueckWWWEBECC3984Szenario4 -->
                   <span class="method-name">sachnummernValidierungBeiStueckWWWEBECC3984Szenario4</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
-          <div class="suite-Surefire_suite-class-passed">
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.webecc.regressionstests.LexikonRegressionTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -368,6 +301,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="checkTheHeaderText">
                   </a> <!-- checkTheHeaderText -->
                   <span class="method-name">checkTheHeaderText</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -375,6 +314,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="dieTextLabelSollNichtExistierenWEBECC4032">
                   </a> <!-- dieTextLabelSollNichtExistierenWEBECC4032 -->
                   <span class="method-name">dieTextLabelSollNichtExistierenWEBECC4032</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -382,6 +327,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="istDerAnlegenVonNeueTextSchluesselErfolgreich">
                   </a> <!-- istDerAnlegenVonNeueTextSchluesselErfolgreich -->
                   <span class="method-name">istDerAnlegenVonNeueTextSchluesselErfolgreich</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -389,6 +340,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="istNeuAngelegteTextSchluesselRichtigAngezeigt">
                   </a> <!-- istNeuAngelegteTextSchluesselRichtigAngezeigt -->
                   <span class="method-name">istNeuAngelegteTextSchluesselRichtigAngezeigt</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -396,6 +353,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="loginTest">
                   </a> <!-- loginTest -->
                   <span class="method-name">loginTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -403,6 +366,12 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="openTheTextschluesselDetailansicht">
                   </a> <!-- openTheTextschluesselDetailansicht -->
                   <span class="method-name">openTheTextschluesselDetailansicht</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -410,10 +379,16 @@ Session ID: 109b5b7a273728b884d800b673034a2c
                   <a name="textschluesselSuchen">
                   </a> <!-- textschluesselSuchen -->
                   <span class="method-name">textschluesselSuchen</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.webecc.regressionstests.LexikonRegressionTest.setup(LexikonRegressionTest.java:32)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -468,64 +443,68 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(13);
+data.addRows(14);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginTest')
-data.setCell(0, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
-data.setCell(0, 3, 73208);
+data.setCell(0, 1, 'textschluesselSuchen')
+data.setCell(0, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
+data.setCell(0, 3, 1);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'sachnummernValidierungBeiStueckWWWEBECC3984Szenario3')
-data.setCell(1, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
-data.setCell(1, 3, 16663);
+data.setCell(1, 1, 'dieTextLabelSollNichtExistierenWEBECC4032')
+data.setCell(1, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
+data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'sachnummernValidierungBeiStueckWWWEBECC3984Szenario4')
-data.setCell(2, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
-data.setCell(2, 3, 15175);
+data.setCell(2, 1, 'baukastenSuchen')
+data.setCell(2, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'baukastenSuchen')
-data.setCell(3, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
-data.setCell(3, 3, 10498);
+data.setCell(3, 1, 'sachnummernValidierungBeiStueckWWWEBECC3984Szenario3')
+data.setCell(3, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'bugTicketWEBECC3699')
-data.setCell(4, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
-data.setCell(4, 3, 10438);
+data.setCell(4, 1, 'loginTest')
+data.setCell(4, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
+data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'dieTextLabelSollNichtExistierenWEBECC4032')
-data.setCell(5, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(5, 3, 10394);
+data.setCell(5, 1, 'testAbsichtlichFehlgeschlagen')
+data.setCell(5, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
+data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'loginTest')
-data.setCell(6, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
-data.setCell(6, 3, 6119);
+data.setCell(6, 1, 'bugTicketWEBECC3699')
+data.setCell(6, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
+data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'istDerAnlegenVonNeueTextSchluesselErfolgreich')
-data.setCell(7, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(7, 3, 6064);
+data.setCell(7, 1, 'sachnummernValidierungBeiStueckWWWEBECC3984Szenario4')
+data.setCell(7, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
+data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'loginTest')
+data.setCell(8, 1, 'checkTheHeaderText')
 data.setCell(8, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(8, 3, 5730);
+data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'openTheTextschluesselDetailansicht')
-data.setCell(9, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(9, 3, 1068);
+data.setCell(9, 1, 'loginTest')
+data.setCell(9, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
+data.setCell(9, 3, 0);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'textschluesselSuchen')
+data.setCell(10, 1, 'openTheTextschluesselDetailansicht')
 data.setCell(10, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(10, 3, 993);
+data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'istNeuAngelegteTextSchluesselRichtigAngezeigt')
-data.setCell(11, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(11, 3, 145);
+data.setCell(11, 1, 'loginTest')
+data.setCell(11, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
+data.setCell(11, 3, 0);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'checkTheHeaderText')
+data.setCell(12, 1, 'istDerAnlegenVonNeueTextSchluesselErfolgreich')
 data.setCell(12, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(12, 3, 28);
+data.setCell(12, 3, 0);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'istNeuAngelegteTextSchluesselRichtigAngezeigt')
+data.setCell(13, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
+data.setCell(13, 3, 0);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -561,103 +540,17 @@ return data;
               <div class="chronological-class-name">com.webecc.regressionstests.KatalogSeitenRegressionsTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">1953 ms</span>
+                <span class="method-start">2708 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.LexikonRegressionTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup</span>
-                <span class="method-start">2965 ms</span>
+                <span class="method-start">3815 ms</span>
               </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.webecc.regressionstests.BaukastenRegressionsTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">loginTest</span>
-                <span class="method-start">4041 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">baukastenSuchen</span>
-                <span class="method-start">77368 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">bugTicketWEBECC3699</span>
-                <span class="method-start">87986 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.webecc.regressionstests.KatalogSeitenRegressionsTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">98517 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">sachnummernValidierungBeiStueckWWWEBECC3984Szenario3</span>
-                <span class="method-start">104637 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">sachnummernValidierungBeiStueckWWWEBECC3984Szenario4</span>
-                <span class="method-start">121304 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.webecc.regressionstests.LexikonRegressionTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">136480 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">openTheTextschluesselDetailansicht</span>
-                <span class="method-start">142211 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">textschluesselSuchen</span>
-                <span class="method-start">143280 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">checkTheHeaderText</span>
-                <span class="method-start">144274 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">dieTextLabelSollNichtExistierenWEBECC4032</span>
-                <span class="method-start">144304 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">istDerAnlegenVonNeueTextSchluesselErfolgreich</span>
-                <span class="method-start">154699 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">istNeuAngelegteTextSchluesselRichtigAngezeigt</span>
-                <span class="method-start">160763 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.webecc.regressionstests.BaukastenRegressionsTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">160908 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.webecc.regressionstests.KatalogSeitenRegressionsTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">161188 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.webecc.regressionstests.LexikonRegressionTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">161472 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

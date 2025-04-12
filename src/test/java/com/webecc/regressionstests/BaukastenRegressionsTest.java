@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
@@ -50,6 +51,7 @@ public void setup(){
     }
 
     driver = new ChromeDriver(options);
+    Reporter.getCurrentTestResult().getTestContext().setAttribute("driver", driver);
 
     if (!headless.equalsIgnoreCase("true")) {
         driver.manage().window().maximize();
@@ -68,14 +70,18 @@ public void setup(){
         loginPage.login("ALIM01", "#Vancouver.Munich0710");
         Assert.assertTrue(dashboardPage.sichtbarkeitDerLogoutButton());
     }
-
     @Test(priority = 2)
+    public void testAbsichtlichFehlgeschlagen() {
+        Assert.assertTrue(false, "Dieser Test schlägt absichtlich fehl");
+    }
+
+    @Test(priority = 3)
     public void baukastenSuchen(){
         String nummer = "81#1*";
         baukastenSuchePage.baukastenSuchen(nummer);
         Assert.assertTrue(baukastenSuchePage.istDieBaukastenSucheErfolgreich());
     }
-    @Test(priority = 3)
+    @Test(priority = 4)
     public void bugTicketWEBECC3699(){
         String komputer = "81#2010*";
         Assert.assertTrue(baukastenSuchePage.bugTicketWEBECC3699(komputer));

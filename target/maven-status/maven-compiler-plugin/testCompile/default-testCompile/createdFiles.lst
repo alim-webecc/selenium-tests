@@ -1,6 +1,7 @@
 com\webecc\regressionstests\KatalogSeitenRegressionsTest.class
 com\webecc\regressionstests\LexikonRegressionTest.class
+com\webecc\regressionstests\BaukastenRegressionsTest.class
 com\webecc\utils\ScreenshotListener.class
 com\webecc\LoopTest.class
 com\webecc\utils\ScreenshotUtil.class
-com\webecc\regressionstests\BaukastenRegressionsTest.class
+com\webecc\utils\ScreenshotHtmlReport.class
