@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.webecc.pages.DashboardPage;
@@ -20,23 +21,29 @@ public class LexikonRegressionTest {
     DashboardPage dashboardPage;
     TextschluesselDetailansichtPage textschluesselDetailansichtPage;
 
-    @BeforeClass
-    public void setup() {
+    @BeforeTest
+    public void setup(){
         WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
 
-        // Optional: headless steuerbar über System-Property
+        ChromeOptions options = new ChromeOptions();
         String headless = System.getProperty("headless", "false");
+
         if (headless.equalsIgnoreCase("true")) {
-            options.addArguments("--headless=new");
+            options.addArguments("--headless=new");   // Für moderne Browser
+            options.addArguments("--headless");       // Fallback für ältere
+            options.addArguments("window-size=1920,1080");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
         }
 
         driver = new ChromeDriver(options);
 
-        driver.manage().window().maximize();
+        if (!headless.equalsIgnoreCase("true")) {
+            driver.manage().window().maximize();
+        }
 
-        // Jetzt ist der Driver bereit → PageObjects initialisieren
+        // Page Objects
         loginPage = new LoginPage(driver);
         dashboardPage = new DashboardPage(driver);
         textschluesselDetailansichtPage = new TextschluesselDetailansichtPage(driver);
