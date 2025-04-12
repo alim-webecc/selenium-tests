@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">13 methods,   13 passed</span>
+                    <span class="method-stats">14 methods, 1 failed,   13 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="testAbsichtlichFehlgeschlagen">testAbsichtlichFehlgeschlagen</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -133,17 +147,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.LexikonRegressionTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.KatalogSeitenRegressionsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.webecc.regressionstests.BaukastenRegressionsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -178,35 +192,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.webecc.regressionstests.BaukastenRegressionsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="baukastenSuchen">
-                  </a> <!-- baukastenSuchen -->
-                  <span class="method-name">baukastenSuchen</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="bugTicketWEBECC3699">
-                  </a> <!-- bugTicketWEBECC3699 -->
-                  <span class="method-name">bugTicketWEBECC3699</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
+                  <a name="testAbsichtlichFehlgeschlagen">
+                  </a> <!-- testAbsichtlichFehlgeschlagen -->
+                  <span class="method-name">testAbsichtlichFehlgeschlagen</span>
+                  <div class="stack-trace">java.lang.AssertionError: Dieser Test schlägt absichtlich fehl expected [true] but found [false]
+	at com.webecc.regressionstests.BaukastenRegressionsTest.testAbsichtlichFehlgeschlagen(BaukastenRegressionsTest.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -232,6 +237,35 @@
                   <a name="sachnummernValidierungBeiStueckWWWEBECC3984Szenario4">
                   </a> <!-- sachnummernValidierungBeiStueckWWWEBECC3984Szenario4 -->
                   <span class="method-name">sachnummernValidierungBeiStueckWWWEBECC3984Szenario4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.webecc.regressionstests.BaukastenRegressionsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="baukastenSuchen">
+                  </a> <!-- baukastenSuchen -->
+                  <span class="method-name">baukastenSuchen</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="bugTicketWEBECC3699">
+                  </a> <!-- bugTicketWEBECC3699 -->
+                  <span class="method-name">bugTicketWEBECC3699</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -347,59 +381,63 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(13);
+data.addRows(14);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'sachnummernValidierungBeiStueckWWWEBECC3984Szenario3')
 data.setCell(0, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
-data.setCell(0, 3, 17101);
+data.setCell(0, 3, 16717);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'sachnummernValidierungBeiStueckWWWEBECC3984Szenario4')
 data.setCell(1, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
-data.setCell(1, 3, 14357);
+data.setCell(1, 3, 13649);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'baukastenSuchen')
 data.setCell(2, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
-data.setCell(2, 3, 12317);
+data.setCell(2, 3, 12167);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'dieTextLabelSollNichtExistierenWEBECC4032')
 data.setCell(3, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(3, 3, 10516);
+data.setCell(3, 3, 10372);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'bugTicketWEBECC3699')
 data.setCell(4, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
-data.setCell(4, 3, 10000);
+data.setCell(4, 3, 9803);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'istDerAnlegenVonNeueTextSchluesselErfolgreich')
 data.setCell(5, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(5, 3, 6943);
+data.setCell(5, 3, 7607);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'loginTest')
-data.setCell(6, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
-data.setCell(6, 3, 5959);
+data.setCell(6, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
+data.setCell(6, 3, 6035);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'loginTest')
-data.setCell(7, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(7, 3, 5920);
+data.setCell(7, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
+data.setCell(7, 3, 6018);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'loginTest')
 data.setCell(8, 2, 'com.webecc.regressionstests.KatalogSeitenRegressionsTest')
-data.setCell(8, 3, 5688);
+data.setCell(8, 3, 5947);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'openTheTextschluesselDetailansicht')
 data.setCell(9, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(9, 3, 995);
+data.setCell(9, 3, 910);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'textschluesselSuchen')
 data.setCell(10, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(10, 3, 989);
+data.setCell(10, 3, 869);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'istNeuAngelegteTextSchluesselRichtigAngezeigt')
 data.setCell(11, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(11, 3, 118);
+data.setCell(11, 3, 148);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'checkTheHeaderText')
 data.setCell(12, 2, 'com.webecc.regressionstests.LexikonRegressionTest')
-data.setCell(12, 3, 31);
+data.setCell(12, 3, 24);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testAbsichtlichFehlgeschlagen')
+data.setCell(13, 2, 'com.webecc.regressionstests.BaukastenRegressionsTest')
+data.setCell(13, 3, 7);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -440,96 +478,102 @@ return data;
               <div class="chronological-class-name">com.webecc.regressionstests.KatalogSeitenRegressionsTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">2152 ms</span>
+                <span class="method-start">2197 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.LexikonRegressionTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">3201 ms</span>
+                <span class="method-start">3245 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.BaukastenRegressionsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">4344 ms</span>
+                <span class="method-start">4378 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAbsichtlichFehlgeschlagen</span>
+                <span class="method-start">10455 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">baukastenSuchen</span>
-                <span class="method-start">10306 ms</span>
+                <span class="method-start">10867 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">bugTicketWEBECC3699</span>
-                <span class="method-start">22623 ms</span>
+                <span class="method-start">23037 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.KatalogSeitenRegressionsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">32623 ms</span>
+                <span class="method-start">32845 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sachnummernValidierungBeiStueckWWWEBECC3984Szenario3</span>
-                <span class="method-start">38311 ms</span>
+                <span class="method-start">38794 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sachnummernValidierungBeiStueckWWWEBECC3984Szenario4</span>
-                <span class="method-start">55414 ms</span>
+                <span class="method-start">55514 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.LexikonRegressionTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">69772 ms</span>
+                <span class="method-start">69166 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">openTheTextschluesselDetailansicht</span>
-                <span class="method-start">75693 ms</span>
+                <span class="method-start">75203 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">textschluesselSuchen</span>
-                <span class="method-start">76688 ms</span>
+                <span class="method-start">76117 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkTheHeaderText</span>
-                <span class="method-start">77678 ms</span>
+                <span class="method-start">76988 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">dieTextLabelSollNichtExistierenWEBECC4032</span>
-                <span class="method-start">77710 ms</span>
+                <span class="method-start">77014 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">istDerAnlegenVonNeueTextSchluesselErfolgreich</span>
-                <span class="method-start">88228 ms</span>
+                <span class="method-start">87390 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">istNeuAngelegteTextSchluesselRichtigAngezeigt</span>
-                <span class="method-start">95171 ms</span>
+                <span class="method-start">95000 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.BaukastenRegressionsTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">95289 ms</span>
+                <span class="method-start">95150 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.KatalogSeitenRegressionsTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">95590 ms</span>
+                <span class="method-start">95367 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.webecc.regressionstests.LexikonRegressionTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">95970 ms</span>
+                <span class="method-start">95616 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

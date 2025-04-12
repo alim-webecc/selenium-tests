@@ -1,5 +1,6 @@
 package com.webecc.utils;
 
+import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,10 +21,13 @@ public class ScreenshotUtil {
             Files.createDirectories(destination.getParent());
             Files.copy(screenshot.toPath(), destination);
             System.out.println("📸 Screenshot gespeichert unter: " + destination.toAbsolutePath());
+            attachScreenshotToAllure(driver);
         } catch (IOException e) {
             System.err.println("❌ Screenshot konnte nicht erstellt werden: " + e.getMessage());
         }
-
-
+    }
+    @Attachment(value = "📸 Screenshot bei Fehler", type = "image/png")
+    public static byte[] attachScreenshotToAllure(WebDriver driver) {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 }
