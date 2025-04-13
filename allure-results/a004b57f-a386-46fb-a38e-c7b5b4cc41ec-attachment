@@ -1,0 +1,10 @@
+❗ Test fehlgeschlagen bei: sachnummernValidierungBeiStueckWWWEBECC3984Szenario4
+Fehler: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-ng-c1604453939="" type="submit" class="primary stahl z--1" title="Suchen">...</button> is not clickable at point (236, 135). Other element would receive the click: <span _ngcontent-ng-c3208400309="" class="resize-area ng-star-inserted"></span>
+  (Session info: chrome=135.0.7049.85)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ae3cba8dfcffd6e241736900e3c250a, clickElement {id=f.6FE100D637AD3C71B0CF0F894DC188F3.d.961BAAA5A73381025635B7D9FD5ACDF2.e.431}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ALIM~1.HAM\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56040}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56040/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ae3cba8dfcffd6e241736900e3c250a)] -> xpath: //div[@class="buttons z--1 search-navigate"]/button[@class="primary stahl z--1"]]
+Session ID: 4ae3cba8dfcffd6e241736900e3c250a

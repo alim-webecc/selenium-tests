@@ -1,0 +1,2 @@
+❗ Test fehlgeschlagen bei: testAbsichtlichFehlgeschlagen
+Fehler: java.lang.AssertionError: Dieser Test schlägt absichtlich fehl expected [true] but found [false]

@@ -5,6 +5,10 @@ import com.webecc.pages.LoginPage;
 import com.webecc.pages.stuecklisten.baukasten.BaukastenSuchePage;
 import com.webecc.utils.ScreenshotListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -71,7 +75,10 @@ public void setup(){
         Assert.assertTrue(dashboardPage.sichtbarkeitDerLogoutButton());
     }
     @Test(priority = 2)
+    @Description("Dieser Test ist absichtlich fehlerhaft für Allure")
+    @Severity(SeverityLevel.CRITICAL)
     public void testAbsichtlichFehlgeschlagen() {
+        Allure.step("Ein Beispiel-Allure-Step");
         Assert.assertTrue(false, "Dieser Test schlägt absichtlich fehl");
     }
 
@@ -85,6 +92,25 @@ public void setup(){
     public void bugTicketWEBECC3699(){
         String komputer = "81#2010*";
         Assert.assertTrue(baukastenSuchePage.bugTicketWEBECC3699(komputer));
+    }
+    @Test(priority = 5)
+    @Description("Test läuft sicher durch und zeigt sich im Report")
+    @Severity(SeverityLevel.MINOR)
+    public void dummyVisibleTest() {
+        System.out.println("Dummy-Test wird ausgeführt.");
+        Assert.assertTrue(true);
+    }
+
+    @Test(priority = 6)
+    @Description("Allure Smoke Test")
+    @Severity(SeverityLevel.NORMAL)
+    public void allureSmokeTest() {
+        Allure.step("Step 1: Vorbereitung");
+        Allure.step("Step 2: Erwartung");
+        Allure.step("Step 3: Validierung");
+
+        Allure.addAttachment("Text-Log", "Dies ist ein Allure-Test");
+        Assert.assertTrue(true);
     }
 
     @AfterTest

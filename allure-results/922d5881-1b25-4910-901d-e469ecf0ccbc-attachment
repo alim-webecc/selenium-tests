@@ -1,0 +1,2 @@
+❗ Test fehlgeschlagen bei: sachnummernValidierungBeiStueckWWWEBECC3984Szenario3
+Fehler: java.lang.AssertionError: expected [true] but found [false]

@@ -24,6 +24,18 @@ public class ScreenshotListener implements ITestListener {
             // 📸 Screenshot speichern + an Allure anhängen
             ScreenshotUtil.captureScreenshot(driver, methodName);
 
+            // Allure einbetten
+            AllureScreenUtil.attachScreenshot(driver);
+            AllureScreenUtil.attachLogs("❗ Test fehlgeschlagen bei: " + methodName + "\nFehler: " + result.getThrowable());
+
+            System.out.println("📸 AllureScreenshot wurde ausgelöst.");
+            System.out.println("➡️ attachScreenshot: " + driver);
+
+            System.out.println("📸 Screenshot an Allure anhängen...");
+            byte[] screenshot = AllureScreenUtil.attachScreenshot(driver);
+            System.out.println("✅ Screenshot attached? " + (screenshot != null && screenshot.length > 0));
+
+
         } catch (Exception e) {
             System.err.println("❌ ScreenshotListener-Fehler: " + e.getMessage());
         }
