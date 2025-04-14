@@ -1,0 +1,11 @@
+❗ Test fehlgeschlagen bei: sachnummernValidierungBeiStueckWWWEBECC3984Szenario3
+Fehler: org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6e63e59deea6636f19273cc62d894ca5, sendKeysToElement {id=f.663C9C2BD6F6CB30CF4F8CCB9B1D85A8.d.B4CE0AC76767A4361AD3B34612E1001F.e.467, value=[Ljava.lang.CharSequence;@588d630d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ALIM~1.HAM\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49700/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6e63e59deea6636f19273cc62d894ca5)] -> xpath: //app-edit-grid-form[@id='gridItemNumbers']//mat-row[contains(@class, 'row_line_idx_0')]//input[@id="quantity_1"]]
+Session ID: 6e63e59deea6636f19273cc62d894ca5

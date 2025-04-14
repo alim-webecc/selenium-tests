@@ -1,0 +1,11 @@
+❗ Test fehlgeschlagen bei: sachnummernValidierungBeiStueckWWWEBECC3984Szenario3
+Fehler: org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ca447d23d964de3f14d00990fe3b3a61, getElementAttribute {name=title, id=f.753CD0A307F6014FC20369768984BDF1.d.B5400AF5416A9EC01FAC3B49CAC544F6.e.520}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ALIM~1.HAM\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65235}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65235/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ca447d23d964de3f14d00990fe3b3a61)] -> xpath: //app-edit-grid-form[@id="gridItemNumbers"]//mat-row[starts-with(@class, "mat-mdc-row mdc-data-table__row cdk-row row_line_idx_")]//input[@id="itemNumber"]]
+Session ID: ca447d23d964de3f14d00990fe3b3a61

@@ -3,10 +3,7 @@ package com.webecc.pages.Katalog;
 import com.github.javafaker.Faker;
 import com.webecc.pages.DashboardPage;
 import com.webecc.utils.BaseFunctions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -62,11 +59,21 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
         kurzWarten();
         clickWhenClickable(suchButton);
         clickWhenClickable(entwurfSeiteButton);
-        kurzWarten();
         List<String> sachnummerList = new ArrayList<>();
-        for (WebElement sachnummerFeld : sachnummerFelderListe){
-            sachnummerList.add(sachnummerFeld.getAttribute("title"));
+
+        for (int i = 0; i < sachnummerFelderListe.size(); i++) {
+            try {
+                sachnummerList.add(sachnummerFelderListe.get(i).getAttribute("title"));
+            } catch (StaleElementReferenceException e) {
+                // Element erneut holen und dann versuchen
+                WebElement feld = driver.findElements(By.xpath("//input[@id='itemNumber']")).get(i);
+                sachnummerList.add(feld.getAttribute("title"));
+            }
         }
+
+//        for (WebElement sachnummerFeld : sachnummerFelderListe){
+//            sachnummerList.add(sachnummerFeld.getAttribute("title"));
+//        }
         String positionsNummer = String.valueOf(faker.random().nextInt(1, 5));
         String stueckZahl = String.valueOf(faker.random().nextInt(1, 100));
         for (int i = 0; i <= sachnummerFelderListe.size() - 3; i++){
@@ -107,6 +114,7 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
         kurzWarten();
         clickWhenClickable(suchButton);
         clickWhenClickable(entwurfSeiteButton);
+        waitForOverlayToDisappear();
         kurzWarten();
         List<String> sachnummerList = new ArrayList<>();
         for (WebElement sachnummerFeld : sachnummerFelderListe){
