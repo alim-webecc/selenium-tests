@@ -39,9 +39,32 @@ public class BaseFunctions {
     protected void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    protected void waitLongerUntilVisible(WebElement element){
-        waitLonger.until(ExpectedConditions.visibilityOf(element));
+    protected void waitLongerUntilVisible(WebElement element, By locatorFallback) {
+        try {
+            waitLonger.until(driver -> {
+                try {
+                    return element.isDisplayed()
+                            && element.isEnabled()
+                            && element.getCssValue("opacity").equals("1");
+                } catch (StaleElementReferenceException stale) {
+                    return false;
+                }
+            });
+        } catch (TimeoutException | StaleElementReferenceException e) {
+            // Element war stale oder nicht sichtbar – versuche Fallback
+            waitLonger.until(driver -> {
+                try {
+                    WebElement fresh = driver.findElement(locatorFallback);
+                    return fresh.isDisplayed()
+                            && fresh.isEnabled()
+                            && fresh.getCssValue("opacity").equals("1");
+                } catch (Exception inner) {
+                    return false;
+                }
+            });
+        }
     }
+
 
     protected void sendKeysWhenVisibleAndClickable(WebElement element, String text) {
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -88,6 +111,43 @@ public class BaseFunctions {
             return false;
         }
     }
+
+//    protected boolean isVisible(By locator) {
+//        try {
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//            wait.until(driver -> {
+//                try {
+//                    WebElement element = driver.findElement(locator);
+//                    return element.isDisplayed() && element.isEnabled() && element.getCssValue("opacity").equals("1");
+//                } catch (Exception e) {
+//                    return false;
+//                }
+//            });
+//            return true;
+//        } catch (Exception e) {
+//            System.out.println("Element nicht sichtbar oder nicht klickbar: " + e.getMessage());
+//            return false;
+//        }
+//    }
+
+    protected boolean isVisible(WebElement element, By locatorFallback) {
+        try {
+            wait.until(ExpectedConditions.visibilityOf(element));
+            wait.until(driver -> {
+                try {
+                    return element.isDisplayed() && element.isEnabled() && element.getCssValue("opacity").equals("1");
+                } catch (StaleElementReferenceException e) {
+                    // fallback: neu suchen mit locator
+                    WebElement fresh = driver.findElement(locatorFallback);
+                    return fresh.isDisplayed() && fresh.isEnabled() && fresh.getCssValue("opacity").equals("1");
+                }
+            });
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 
     public void overwriteInputValue(WebElement input, String value) {
         waitUntilVisible(input);
@@ -137,6 +197,12 @@ public class BaseFunctions {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
     }
+
+    protected void clickWhenClickable(By locator){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+
     protected void scrollZumElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }

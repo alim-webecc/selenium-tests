@@ -1,0 +1,2 @@
+❗ Test fehlgeschlagen bei: baukastenSuchen
+Fehler: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class="buttons z--1"]/button[@class="secondary stahl z--1"]' (tried for 10 second(s) with 500 milliseconds interval)

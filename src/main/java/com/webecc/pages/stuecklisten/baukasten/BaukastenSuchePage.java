@@ -152,7 +152,7 @@ public class BaukastenSuchePage extends BaseFunctions {
 
     //-----------------------Meldung------------------------
     public boolean istDieBaukastenSucheErfolgreich(){
-        waitLongerUntilVisible(ersteReferenzNummer);
-        return isVisible(ersteReferenzNummer);
+        waitLongerUntilVisible(ersteReferenzNummer, By.xpath("//mat-row[starts-with(@class,\"mat-mdc-row mdc-data-table__row cdk-row row_line_idx_\")][1]//input[@id=\"moduleId\"]"));
+        return isVisible(ersteReferenzNummer, By.xpath("//mat-row[starts-with(@class,\"mat-mdc-row mdc-data-table__row cdk-row row_line_idx_\")][1]//input[@id=\"moduleId\"]"));
     }
 }

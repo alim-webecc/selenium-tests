@@ -93,7 +93,7 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
     }
 
     public boolean isTheTextschluesselPresent() {
-        return isVisible(verwendungenButton);
+        return isVisible(verwendungenButton, By.cssSelector("#btnDetailsUsages"));
     }
 
     public boolean istDasRichtigeTextschluessel() {
@@ -106,7 +106,7 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
 
     public boolean dieTextLabelSollNichtExistieren() {
         clickWhenClickable(neuanlageButton);
-        return !isVisible(falschenTextLabel);
+        return !isVisible(falschenTextLabel, By.cssSelector("app-label-value div.data-text.truncate.ng-star-inserted"));
     }
 
     public String mehrZeiligeTextGenerieren() {
@@ -140,26 +140,28 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
         selectSystemKenzeichen.selectByValue("2: all");
         sendKeysWhenVisibleAndClickable(textAreaCad86, mehrZeiligeTextGenerieren());
         clickWhenClickable(speichernButton);
-        if (isVisible(successAlertContent)) {
+        if (isVisible(successAlertContent, By.cssSelector(".alert.alert-dismissable.alert-success.ng-star-inserted div"))) {
             String successAlertText = successAlertContent.getText();
             String[] teile = successAlertText.split(" ");
             List<String> textTeile = new ArrayList<>(Arrays.asList(teile));
             String neueTextschluesselId = textTeile.get(1);
             textschluesselObjectClass.setTextschluesselId(Integer.parseInt(neueTextschluesselId));
         }
-        return isVisible(successAlert);
+        return isVisible(successAlert, By.cssSelector(".alert.alert-dismissable.alert-success.ng-star-inserted"));
     }
 
     public boolean istNeuAngelegteTextSchluesselRichtigAngezeigt() {
         int n = 0;
-        if (isVisible(textschluesselHeaderTexte.get(0))) {
+        WebElement freshElement1 = driver.findElements(By.cssSelector("app-label-value div.data-text.truncate.ng-star-inserted")).get(0);
+        WebElement freshElement2 = driver.findElements(By.cssSelector("app-label-value div.data-text.truncate.ng-star-inserted")).get(1);
+        if (isVisible(textschluesselHeaderTexte.get(0))) {//falls hier StaleElementReferenceException auftaucht, kann die freshElement1 verwendet werden.
             if (textschluesselHeaderTexte.get(0).getText()
                     .equalsIgnoreCase(String.valueOf(textschluesselObjectClass.getTextschluesselId()))) {
                 n += 1;
 //                System.out.println("TextschlüsselId wurde Richtig angezeigt.");
             }
         }
-        if (isVisible(textschluesselHeaderTexte.get(1))) {
+        if (isVisible(textschluesselHeaderTexte.get(1))) {//falls hier StaleElementReferenceException auftaucht, kann die freshElement2 verwendet werden.
             if (textschluesselObjectClass.getTextDeutschErsteZeile()
                     .contains(textschluesselHeaderTexte.get(1).getText())) {
                 n += 1;
@@ -183,7 +185,7 @@ public class TextschluesselDetailansichtPage extends BaseFunctions {
 //            System.out.println("Checkbox wurde gefunden.");
 
             boolean isSelected = checkbox.isSelected();
-            boolean dropdownVisible = isVisible(zweiteSpracheDropDown);
+            boolean dropdownVisible = isVisible(zweiteSpracheDropDown, By.cssSelector("select[formcontrolname=\"secondLanguage\"]"));
 
             if (isSelected && dropdownVisible) return true;
             if (!isSelected && !dropdownVisible) return true;

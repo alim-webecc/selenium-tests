@@ -65,23 +65,17 @@ public void setup(){
     loginPage = new LoginPage(driver);
     dashboardPage = new DashboardPage(driver);
     baukastenSuchePage = new BaukastenSuchePage(driver);
+    driver.get("https://dev.webecc.com/webecc/#/login");
 }
 
-
     @Test(priority = 1)
-    public void loginTest() {
-        driver.get("https://dev.webecc.com/webecc/#/login");
-        loginPage.login("ALIM01", "#Vancouver.Munich0710");
-        Assert.assertTrue(dashboardPage.sichtbarkeitDerLogoutButton());
-    }
-
-    @Test(priority = 2)
     public void baukastenSuchen(){
+        loginPage.login("ALIM01");
         String ersteNummer = "81#1*";
         baukastenSuchePage.baukastenSuchen(ersteNummer);
         Assert.assertTrue(baukastenSuchePage.istDieBaukastenSucheErfolgreich());
     }
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void bugTicketWEBECC3699(){
         String zweiteNummer = "81#2010*";
         Assert.assertTrue(baukastenSuchePage.bugTicketWEBECC3699(zweiteNummer));

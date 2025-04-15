@@ -1,5 +1,6 @@
 package com.webecc.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,14 +49,6 @@ public class DashboardPage extends BaseFunctions {
     private WebElement katalogSeitenDetailansichtMenuItem;
 
 
-    //---------------------Dashboard----------------------
-    public boolean sichtbarkeitDerLogoutButton(){
-        waitLongerUntilVisible(logoutButton);
-        System.err.println("Logout-Button sichtbar: " + logoutButton.isDisplayed());
-        return isVisible(logoutButton);
-    }
-
-
     //--------------------Stücklisten---------------------
     @FindBy(css = "#menuDropdownTriggerPartsList")
     private WebElement stueckListenMenuButton;
@@ -74,6 +67,18 @@ public class DashboardPage extends BaseFunctions {
 
     @FindBy(css = "menuDropdownItemModuleStatistics")
     private WebElement snrBaukastenVerwendungenMenuItem;
+
+    //---------------------Dashboard----------------------
+    public boolean sichtbarkeitDerLogoutButton(){
+        waitLongerUntilVisible(logoutButton, By.cssSelector("button.app-button-logout"));
+        System.err.println("Logout-Button sichtbar: " + logoutButton.isDisplayed());
+        return isVisible(logoutButton, By.cssSelector("button.app-button-logout"));
+    }
+
+    public void logout(){
+        clickWhenClickable(By.cssSelector("button.app-button-logout"));
+        clickWhenClickable(By.xpath("//button[@id = \"btnCancelExitApplication\"]/following-sibling::button[@class=\"btn-primary stahl\"]"));
+    }
 
 
     //--------------------Lexikon---------------------

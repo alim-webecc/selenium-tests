@@ -1,5 +1,6 @@
 package com.webecc.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,13 +30,17 @@ public class LoginPage extends BaseFunctions {
     @FindBy(css = ".btn-primary.stahl")
     private WebElement okButton;
 
-    public void login(String username, String password) {
+    public void login(String username) {
         sendKeysWhenVisibleAndClickable(usernameField, username);
-        sendKeysWhenVisibleAndClickable(passwordField, password);
+        sendKeysWhenVisibleAndClickable(passwordField, "#Vancouver.Munich0710");
         clickWhenClickable(loginButton);
-        if (isVisible(secondLoginSessionPopup)) {
+        if (isVisible(secondLoginSessionPopup, By.cssSelector(".modal-content.ng-tns-c1772524388-2"))) {
             clickWhenClickable(okButton);
         }
         waitForOverlayToDisappear();
+    }
+    public boolean istBenutzerEingabefeldSichtbar(){
+        waitLongerUntilVisible(usernameField, By.cssSelector("#username"));
+        return isVisible(usernameField, By.cssSelector("#username"));
     }
 }

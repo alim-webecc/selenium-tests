@@ -1,0 +1,2 @@
+❗ Test fehlgeschlagen bei: sachnummernValidierungBeiStueckWWWEBECC3984Szenario3
+Fehler: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #catalogPageId' (tried for 10 second(s) with 500 milliseconds interval)

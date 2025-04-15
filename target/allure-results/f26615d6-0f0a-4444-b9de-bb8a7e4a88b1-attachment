@@ -1,0 +1,2 @@
+❗ Test fehlgeschlagen bei: bugTicketWEBECC3699
+Fehler: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //cds-icon[starts-with(@id, 'showHideColumnsButton_')]' (tried for 60 second(s) with 500 milliseconds interval)

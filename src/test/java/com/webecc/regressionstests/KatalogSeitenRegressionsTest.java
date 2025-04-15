@@ -50,21 +50,16 @@ public class KatalogSeitenRegressionsTest {
         loginPage = new LoginPage(driver);
         dashboardPage = new DashboardPage(driver);
         katalogSeitenDetailansichtPage = new KatalogSeitenDetailansichtPage(driver);
+        driver.get("https://dev.webecc.com/webecc/#/login");
     }
 
     @Test(priority = 1)
-    public void loginTest() {
-        driver.get("https://dev.webecc.com/webecc/#/login");
-        loginPage.login("ALIM01", "#Vancouver.Munich0710");
-        Assert.assertTrue(dashboardPage.sichtbarkeitDerLogoutButton());
-    }
-
-    @Test(priority = 2)
     public void sachnummernValidierungBeiStueckWWWEBECC3984Szenario3(){//negative Szenarien
+        loginPage.login("ALIM01");
         Assert.assertTrue(katalogSeitenDetailansichtPage.sachnummernValidierungBeiStueckWWWEBECC3984Szenario3());
         katalogSeitenDetailansichtPage.clickOnOkButton();
     }
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void sachnummernValidierungBeiStueckWWWEBECC3984Szenario4(){//negative Szenarien
         Assert.assertTrue(katalogSeitenDetailansichtPage.sachnummernValidierungBeiStueckWWWEBECC3984Szenario4());
         katalogSeitenDetailansichtPage.clickOnOkButton();

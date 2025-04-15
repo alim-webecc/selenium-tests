@@ -103,7 +103,7 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
         kurzWarten();
         clickWhenClickable(freigebenButton);
         kurzWarten();
-        return isVisible(validationPopup);
+        return isVisible(validationPopup, By.cssSelector("#validation-popup"));
     }
     public void clickOnOkButton(){
         clickWhenClickable(okButton);
@@ -148,6 +148,6 @@ public class KatalogSeitenDetailansichtPage extends BaseFunctions {
         kurzWarten();
         clickWhenClickable(freigebenButton);
         kurzWarten();
-        return isVisible(validationPopup);
+        return isVisible(validationPopup, By.cssSelector("#validation-popup"));
     }
 }
