@@ -130,11 +130,12 @@ public class BaseFunctions {
     }
 
     protected void clearWhenVisible(By locator) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).clear();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).clear();
     }
     protected void sendKeysWhenVisibleAndClickable(By locator, String text) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(text);
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
     }
     protected void scrollZumElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
