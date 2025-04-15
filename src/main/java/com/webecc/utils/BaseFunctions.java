@@ -134,6 +134,7 @@ public class BaseFunctions {
     }
     protected void sendKeysWhenVisibleAndClickable(By locator, String text) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(text);
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
     protected void scrollZumElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
